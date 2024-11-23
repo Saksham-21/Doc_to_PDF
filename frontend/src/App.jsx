@@ -60,8 +60,8 @@ export default function DocxToPdfConverter() {
       setProgress(10);
 
       const endpoint = encrypt
-        ? "http://51.21.128.185:8000/convert-to-encrypted-pdf"
-        : "http://51.21.128.185:8000/convert-to-pdf";
+        ? "https://51.21.128.185:8000/convert-to-encrypted-pdf"
+        : "https://51.21.128.185:8000/convert-to-pdf";
 
       const response = await fetch(endpoint, {
         method: "POST",
