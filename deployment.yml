@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-deployment
+  labels:
+    app: fastapi
+spec:
+  replicas: 2  # Number of replicas for scalability
+  selector:
+    matchLabels:
+      app: fastapi
+  template:
+    metadata:
+      labels:
+        app: fastapi
+    spec:
+      containers:
+      - name: fastapi-container
+        image: Saksham1112/backend-fastapi:latest 
+        ports:
+        - containerPort: 8000
+        env:
+        - name: APP_ENV  # Example environment variable
+          value: "production"
