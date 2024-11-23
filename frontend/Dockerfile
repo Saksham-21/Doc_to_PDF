@@ -5,7 +5,7 @@ FROM node:18
 WORKDIR /app
 
 # Step 3: Copy package.json and package-lock.json to the working directory
-COPY package.json package-lock.json ./
+COPY package*.json .
 
 # Step 4: Install dependencies
 RUN npm install
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5173
 
 # Step 7: Set the command to start the Vite dev server
-CMD ["npm", "run", "dev", "--", "--host"]
+CMD ["npm", "run", "dev", "--", "--host=0.0.0.0"]
