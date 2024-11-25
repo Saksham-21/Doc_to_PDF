@@ -12,7 +12,6 @@ RUN mkdir -p /app/uploads
 # Install libreoffice for .docx to .pdf conversion
 RUN apt-get update && apt-get install -y libreoffice && apt-get clean
 
-
 # Copy the backend application code into the container
 COPY . .
 

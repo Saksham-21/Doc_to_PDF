@@ -60,8 +60,8 @@ export default function DocxToPdfConverter() {
       setProgress(10);
 
       const endpoint = encrypt
-        ? "https://ec2-51-21-128-185.eu-north-1.compute.amazonaws.com/convert-to-encrypted-pdf"
-        : "https://ec2-51-21-128-185.eu-north-1.compute.amazonaws.com/convert-to-pdf";
+        ? "https://docpdfbackend-production.up.railway.app/convert-to-encrypted-pdf"
+        : "https://docpdfbackend-production.up.railway.app/convert-to-pdf";
 
       const response = await fetch(endpoint, {
         method: "POST",
